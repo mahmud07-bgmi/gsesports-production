@@ -385,8 +385,14 @@ section {
   gap: 18px;
 }
 
-.services-grid {
+.services-grid,
+.projects-grid,
+.pricing-grid {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-grid {
+  grid-template-columns: 1.2fr 0.8fr;
 }
 
 .service-card,
@@ -448,10 +454,6 @@ section {
   gap: 8px;
 }
 
-.projects-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .project-label {
   display: inline-block;
   margin-bottom: 10px;
@@ -464,11 +466,6 @@ section {
   background: rgba(225,29,46,0.14);
   color: #ff9ea7;
   border: 1px solid rgba(225,29,46,0.2);
-}
-
-.pricing-grid {
-  grid-template-columns: repeat(3, 1fr);
-  align-items: stretch;
 }
 
 .price {
@@ -505,10 +502,6 @@ section {
 .pricing-card .btn {
   margin-top: 18px;
   width: 100%;
-}
-
-.contact-grid {
-  grid-template-columns: 1.2fr 0.8fr;
 }
 
 .contact-list {
