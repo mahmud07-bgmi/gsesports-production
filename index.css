@@ -117,14 +117,14 @@ img{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:0px;
+  gap:0;
   margin-bottom:18px;
 }
 
 .brand{
   display:flex;
   align-items:center;
-  gap:0px;
+  gap:0;
 }
 
 .nav-logo{
@@ -133,13 +133,12 @@ img{
   object-fit:contain;
   filter:drop-shadow(0 6px 16px rgba(255,0,0,0.28));
   flex-shrink:0;
-
-  margin-right:-12px;   /* 👈 ye add karo */
+  margin-right:-12px;
 }
 
 .brand-text{
   line-height:0.8;
-  margin-left:-4px;   /* 👈 main fix (logo ke paas laane ke liye) */
+  margin-left:-4px;
 }
 
 .brand-text strong{
@@ -157,7 +156,7 @@ img{
   color:var(--soft);
   text-transform:uppercase;
   letter-spacing:1.5px;
-  margin-top:0px;
+  margin-top:0;
 }
 
 .nav-links{
@@ -515,15 +514,53 @@ img{
   .navbar{
     flex-direction:column;
     align-items:flex-start;
+    gap:12px;
+  }
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-right:0;
+  }
+
+  .nav-logo{
+    width:54px;
+    height:auto;
+    margin-right:0;
+  }
+
+  .brand-text{
+    margin-left:0;
+    line-height:0.9;
+  }
+
+  .brand-text strong{
+    font-size:22px;
+    line-height:0.9;
+  }
+
+  .brand-text span{
+    font-size:8px;
+    letter-spacing:1px;
+    margin-top:1px;
   }
 
   .nav-links{
     width:100%;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:10px;
   }
 
   .nav-links a{
-    flex:1;
     text-align:center;
+    padding:12px 8px;
+    font-size:12px;
+    min-height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
 
   .hero-left,
@@ -547,13 +584,5 @@ img{
 
   .cta h2{
     font-size:36px;
-  }
-
-  .nav-logo{
-    width:46px;
-  }
-
-  .brand-text strong{
-    font-size:26px;
   }
 }
