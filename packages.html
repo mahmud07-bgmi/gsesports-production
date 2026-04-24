@@ -4,162 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Packages - MAX STUDIOS</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="packages.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(135deg,#050000,#140000);
+      color:#fff;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:30px;
+    }
+
+    h1{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .pricing{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:linear-gradient(180deg,#0d0000,#050000);
+      border:1px solid rgba(255,0,0,0.2);
+      border-radius:15px;
+      padding:20px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.5);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card h2{
+      text-align:center;
+      margin-bottom:10px;
+      color:#ff2a2a;
+    }
+
+    ul{
+      list-style:none;
+      padding:0;
+    }
+
+    ul li{
+      padding:8px 0;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+
+    .btn{
+      display:block;
+      text-align:center;
+      padding:12px;
+      margin-top:15px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,#ff2a2a,#cb0000);
+      color:#fff;
+    }
+
+    .btn-secondary{
+      background:#222;
+      color:#ccc;
+    }
+
+  </style>
 </head>
 <body>
-  <div class="cursor"></div>
 
-  <div class="container">
-    <header class="navbar">
-<a href="index.html" class="brand">
-  <img src="assets/studios-logo.png" class="nav-logo" alt="MAX STUDIOS">
-  <div class="brand-text">
-    <strong>MAX STUDIOS</strong>
-    <span>Production</span>
+<div class="container">
+  <h1>Production Packages</h1>
+
+  <div class="pricing">
+
+    <!-- BASIC -->
+    <div class="card">
+      <h2>BASIC</h2>
+      <ul>
+        <li>Start</li>
+        <li>End</li>
+        <li>Virtual Caster Desk</li>
+        <li>Points System</li>
+        <li>Highlights</li>
+      </ul>
+
+      <a href="https://wa.me/918876218415?text=Hello%20GS%20ESPORTS%2C%20I%20want%20to%20book%20BASIC%20PLAN" target="_blank" class="btn btn-primary">
+        Choose Plan
+      </a>
+
+      <a href="#" class="btn btn-secondary">View Details</a>
+    </div>
+
+    <!-- ADVANCE -->
+    <div class="card">
+      <h2>ADVANCE</h2>
+      <ul>
+        <li>Everything in Basic</li>
+        <li>Map Cinematic</li>
+        <li>Team Elimination</li>
+        <li>Alive Stats</li>
+      </ul>
+
+      <a href="https://wa.me/918876218415?text=Hello%20GS%20ESPORTS%2C%20I%20want%20to%20book%20ADVANCE%20PLAN" target="_blank" class="btn btn-primary">
+        Choose Plan
+      </a>
+
+      <a href="#" class="btn btn-secondary">View Details</a>
+    </div>
+
+    <!-- ELITE -->
+    <div class="card">
+      <h2>ELITE</h2>
+      <ul>
+        <li>Everything in Advance</li>
+        <li>Team Domination</li>
+        <li>Zone Timer</li>
+        <li>Top 5 MVP</li>
+      </ul>
+
+      <a href="https://wa.me/918876218415?text=Hello%20GS%20ESPORTS%2C%20I%20want%20to%20book%20ELITE%20PLAN" target="_blank" class="btn btn-primary">
+        Choose Plan
+      </a>
+
+      <a href="#" class="btn btn-secondary">View Details</a>
+    </div>
+
   </div>
-</a>
+</div>
 
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="works.html">Past Works</a>
-        <a href="packages.html" class="active">Packages</a>
-      </nav>
-    </header>
-
-    <section class="page-hero">
-      <span class="kicker">Production Charges</span>
-      <h1>Production Packages</h1>
-      <p>
-        Professional BGMI tournament production packages for scrims, events, and custom broadcasts.
-        Choose the plan that fits your production level.
-      </p>
-    </section>
-
-    <section class="pricing">
-      <div class="card basic tilt-card">
-        <div class="card-head">
-          <h2>BASIC</h2>
-          <div class="plan-line">Starter Production Package</div>
-        </div>
-        <div class="card-body">
-          <ul class="features">
-            <li><span>✓</span> Start</li>
-            <li><span>✓</span> End</li>
-            <li><span>✓</span> Virtual Caster Desk</li>
-            <li><span>✓</span> Points System</li>
-            <li><span>✓</span> PP Distribution</li>
-            <li><span>✓</span> Road Map</li>
-            <li><span>✓</span> Map Schedule</li>
-            <li><span>✓</span> Event Calendar</li>
-            <li><span>✓</span> Map with Team Logo</li>
-            <li><span>✓</span> Overlay</li>
-            <li><span>✓</span> Single POV + Map</li>
-            <li><span>✓</span> Dual POV</li>
-            <li><span>✓</span> Other Side</li>
-            <li><span>✓</span> Single POV + 1 Map</li>
-            <li><span>✓</span> Highlights</li>
-            <li><span>✓</span> WWCD Video</li>
-            <li><span>✓</span> Stinger Transition</li>
-          </ul>
-
-          <div class="btn-row">
-            <a href="#" class="btn btn-primary glow-btn">Choose Plan</a>
-            <a href="#" class="btn btn-secondary">View Details</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card advance tilt-card">
-        <div class="card-head">
-          <h2>ADVANCE</h2>
-          <div class="plan-line">Improved Broadcast Experience</div>
-        </div>
-        <div class="card-body">
-          <ul class="features">
-            <li><span>✓</span> Everything in Basic</li>
-            <li><span>✓</span> Map with Team Logos</li>
-            <li><span>✓</span> Map Cinematic</li>
-            <li><span>✓</span> Match Coming Up</li>
-            <li><span>✓</span> Plane Flag</li>
-            <li><span>✓</span> Alive Stats with Finishes</li>
-            <li><span>✓</span> Team Elimination</li>
-            <li><span>✓</span> Forecast (Top Alive)</li>
-            <li><span>✓</span> Overall PT</li>
-          </ul>
-
-          <div class="btn-row">
-            <a href="#" class="btn btn-primary glow-btn">Choose Plan</a>
-            <a href="#" class="btn btn-secondary">View Details</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card elite tilt-card">
-        <div class="badge">Most Premium</div>
-        <div class="card-head">
-          <h2>ELITE</h2>
-          <div class="plan-line">Complete High-End Production</div>
-        </div>
-        <div class="card-body">
-          <ul class="features">
-            <li><span>✓</span> Everything in Advance</li>
-            <li><span>✓</span> Giveaway Details</li>
-            <li><span>✓</span> Promotions / Banners</li>
-            <li><span>✓</span> Map Drop Down</li>
-            <li><span>✓</span> Team Name with Logos</li>
-            <li><span>✓</span> Alive Stats with Team Finishes and Total PTS</li>
-            <li><span>✓</span> First Blood</li>
-            <li><span>✓</span> Team Domination</li>
-            <li><span>✓</span> Zone Shrink Timer</li>
-            <li><span>✓</span> Out of Zone Teams</li>
-            <li><span>✓</span> WWCD or Team Card with Logo and Finishes</li>
-            <li><span>✓</span> Match PT</li>
-            <li><span>✓</span> Top 5 MVP</li>
-          </ul>
-
-          <div class="btn-row">
-            <a href="#" class="btn btn-primary glow-btn">Choose Plan</a>
-            <a href="#" class="btn btn-secondary">View Details</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="terms-section tilt-card">
-      <div class="terms-head">
-        <span class="kicker">Important</span>
-        <h2>Terms & Conditions</h2>
-      </div>
-
-      <div class="terms-box">
-        <ul class="terms-list">
-          <li>50% advance payment required before starting the production work.</li>
-          <li>Remaining payment must be cleared before or immediately after the event ends.</li>
-          <li>Any extra custom graphics, urgent edits, or last-minute changes may include additional charges.</li>
-          <li>Match schedule, room details, team list, and event assets must be provided on time by the client.</li>
-          <li>Delays caused by late data, incomplete assets, or organizer-side issues will not be our responsibility.</li>
-          <li>Package details are based on the selected production level and event requirements.</li>
-          <li>Production setup will begin only after confirmation of booking and advance payment.</li>
-          <li>No refund after the work has started or production resources have been blocked for the event.</li>
-          <li>Client must inform all required branding, sponsor logos, and overlay changes before the event day.</li>
-          <li>MAX STUDIOS reserves the right to refuse abusive behavior, fake bookings, or non-payment cases.</li>
-        </ul>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p>© 2026 MAX STUDIOS Production. All Rights Reserved.</p>
-      <div class="socials">
-        <a href="https://www.instagram.com/mahmud07_bgmi/?hl=en" target="_blank">IG</a>
-        <a href="https://www.youtube.com/watch?v=cpt_hyMK-tQ" target="_blank">YT</a>
-        <a href="#" target="_blank">WA</a>
-      </div>
-    </footer>
-  </div>
-
-  <script src="packages.js"></script>
 </body>
 </html>
