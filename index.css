@@ -108,12 +108,11 @@ img{
     0 0 45px rgba(0,200,255,0.35);
 }
 
-/* ===== NAVBAR ===== */
 .navbar{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:0;
+  gap:8px;              /* 🔥 spacing add */
   margin-bottom:18px;
 }
 
@@ -124,17 +123,17 @@ img{
 }
 
 .nav-logo{
-  width:110px;
+  width:100px;
   height:auto;
   object-fit:contain;
   filter:drop-shadow(0 6px 16px rgba(0,200,255,0.28));
   flex-shrink:0;
-  margin-right:-12px;
+  margin:0;   /* 🔥 fix */
 }
 
 .brand-text{
-  line-height:0.8;
-  margin-left:-4px;
+  line-height:0.9;
+  margin:0;   /* 🔥 fix */
 }
 
 .brand-text strong{
