@@ -239,12 +239,13 @@ img{
 
 .thumb{
   position:relative;
-  height:250px;
+  width:100%;
+  aspect-ratio:16/9;   /* ✅ YouTube ratio fix */
   border-radius:16px;
   overflow:hidden;
   margin-bottom:14px;
   border:1px solid rgba(0,200,255,0.22);
-  background:linear-gradient(135deg, #08131f, #080808 60%, #0a1a2a);
+  background:#000;
 }
 
 .thumb-img{
