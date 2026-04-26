@@ -95,13 +95,9 @@ img{
     0 0 10px rgba(0,200,255,0.9),
     0 0 20px rgba(0,200,255,0.6),
     0 0 35px rgba(0,200,255,0.28);
-  transition:
-    width .18s ease,
-    height .18s ease,
-    border-color .18s ease,
-    box-shadow .18s ease;
-}
 
+  transition:none;  /* 🔥 ye add kar */
+}
 .cursor.active{
   width:34px;
   height:34px;
