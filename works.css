@@ -240,7 +240,7 @@ img{
 .thumb{
   position:relative;
   width:100%;
-  aspect-ratio:16/9;   /* ✅ YouTube ratio fix */
+  aspect-ratio:16/9;   /* ✅ PC + Mobile both */
   border-radius:16px;
   overflow:hidden;
   margin-bottom:14px;
