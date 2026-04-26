@@ -1,31 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-  /* ===== Mouse Glow Background - smoother ===== */
-  let bgTicking = false;
-
-  document.addEventListener("mousemove", (e) => {
-    const x = e.clientX;
-    const y = e.clientY;
-
-    if (!bgTicking) {
-      requestAnimationFrame(() => {
-        document.documentElement.style.setProperty("--x", x + "px");
-        document.documentElement.style.setProperty("--y", y + "px");
-        bgTicking = false;
-      });
-
-      bgTicking = true;
-    }
-  });
-
-  /* ===== Custom Cursor - instant ===== */
   const cursor = document.querySelector(".cursor");
 
-  if (cursor) {
-    document.addEventListener("pointermove", (e) => {
-      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-    }, { passive: true });
+  let mouseX = 0;
+  let mouseY = 0;
+  let ticking = false;
 
+  document.addEventListener("pointermove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        document.documentElement.style.setProperty("--x", mouseX + "px");
+        document.documentElement.style.setProperty("--y", mouseY + "px");
+
+        if (cursor) {
+          cursor.style.transform =
+            `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+        }
+
+        ticking = false;
+      });
+
+      ticking = true;
+    }
+  }, { passive: true });
+
+  if (cursor) {
     const hoverTargets = document.querySelectorAll(
       ".tilt-card, .nav-links a, .socials a, .btn"
     );
@@ -36,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ===== Tilt Effect ===== */
   const cards = document.querySelectorAll(".tilt-card");
 
   cards.forEach((card) => {
@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ===== Button Glow - blue ===== */
   const buttons = document.querySelectorAll(".btn");
 
   buttons.forEach((btn) => {
@@ -75,5 +74,4 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.style.boxShadow = "";
     });
   });
-
 });
