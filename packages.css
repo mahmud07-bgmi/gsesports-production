@@ -123,23 +123,23 @@ img{
 .brand{
   display:flex;
   align-items:center;
-  gap:0;
+  gap:8px;        /* 🔥 spacing fix */
   margin-right:auto;
   color:#fff;
 }
 
 .nav-logo{
-  width:110px;
+  width:100px;
   height:auto;
   object-fit:contain;
   filter:drop-shadow(0 6px 16px rgba(0,200,255,0.28));
   flex-shrink:0;
-  margin-right:-12px;
+  margin:0;   /* 🔥 fix */
 }
 
 .brand-text{
-  line-height:0.8;
-  margin-left:-4px;
+  line-height:0.9;
+  margin:0;   /* 🔥 fix */
 }
 
 .brand-text strong{
