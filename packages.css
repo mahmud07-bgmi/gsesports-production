@@ -460,9 +460,11 @@ img{
 
 .btn-primary:hover{
   transform:translateY(-2px);
-  box-shadow:0 14px 28px rgba(0,200,255,0.30);
+  box-shadow:
+    0 0 20px rgba(0,200,255,0.6),
+    0 0 40px rgba(0,200,255,0.3),
+    0 14px 28px rgba(0,200,255,0.25);
 }
-
 .btn-secondary{
   background:linear-gradient(180deg, rgba(34,42,58,0.96), rgba(21,28,41,0.98));
   border-color:rgba(255,255,255,0.10);
