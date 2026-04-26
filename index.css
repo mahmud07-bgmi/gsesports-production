@@ -96,7 +96,7 @@ img{
     0 0 20px rgba(0,200,255,0.6),
     0 0 35px rgba(0,200,255,0.28);
 
-  transition:none;  /* 🔥 ye add kar */
+  transition:none;  /* 🔥 yahi add karna hai */
 }
 .cursor.active{
   width:34px;
