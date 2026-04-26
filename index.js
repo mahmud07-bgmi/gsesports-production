@@ -1,32 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ===== Mouse Glow Background ===== */
+  /* ===== Mouse Glow Background - smoother ===== */
+  let bgTicking = false;
+
   document.addEventListener("mousemove", (e) => {
-    document.documentElement.style.setProperty("--x", e.clientX + "px");
-    document.documentElement.style.setProperty("--y", e.clientY + "px");
+    const x = e.clientX;
+    const y = e.clientY;
+
+    if (!bgTicking) {
+      requestAnimationFrame(() => {
+        document.documentElement.style.setProperty("--x", x + "px");
+        document.documentElement.style.setProperty("--y", y + "px");
+        bgTicking = false;
+      });
+
+      bgTicking = true;
+    }
   });
 
-  /* ===== Custom Cursor ===== */
+  /* ===== Custom Cursor - instant ===== */
   const cursor = document.querySelector(".cursor");
 
   if (cursor) {
-    document.addEventListener("mousemove", (e) => {
-      cursor.style.left = e.clientX + "px";
-      cursor.style.top = e.clientY + "px";
-    });
+    document.addEventListener("pointermove", (e) => {
+      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+    }, { passive: true });
 
     const hoverTargets = document.querySelectorAll(
       ".tilt-card, .nav-links a, .socials a, .btn"
     );
 
     hoverTargets.forEach((item) => {
-      item.addEventListener("mouseenter", () => {
-        cursor.classList.add("active");
-      });
-
-      item.addEventListener("mouseleave", () => {
-        cursor.classList.remove("active");
-      });
+      item.addEventListener("mouseenter", () => cursor.classList.add("active"));
+      item.addEventListener("mouseleave", () => cursor.classList.remove("active"));
     });
   }
 
@@ -57,12 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ===== Button Glow ===== */
+  /* ===== Button Glow - blue ===== */
   const buttons = document.querySelectorAll(".btn");
 
   buttons.forEach((btn) => {
     btn.addEventListener("mouseenter", () => {
-      btn.style.boxShadow = "0 0 20px rgba(255,0,0,0.35)";
+      btn.style.boxShadow = "0 0 20px rgba(0,200,255,0.45)";
     });
 
     btn.addEventListener("mouseleave", () => {
